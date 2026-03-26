@@ -1,7 +1,5 @@
-from Hash import *
-from Cryptage import *
+from Save import *
 
 my_data = "level:1;niveau:1"
-crypt = Cryptage(Hash(my_data).returning()).encrypte()
-print(crypt)
-open("test.dat", "w").write(crypt)
+data = Save(my_data)
+data.save()
