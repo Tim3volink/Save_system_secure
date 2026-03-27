@@ -14,9 +14,14 @@ class Load:
     def test_if_modified(self):
         text = self.load()
         print(text)
-        data, h = text.split('|')
-        if Hash(data).hashing() == h:
-            print(True)
-        else:
+        full_data = text.split('|')
+        if len(full_data) != 2:
             print(False)
             os.remove(self.file)
+        else:
+            data, h = text.split('|')
+            if Hash(data).hashing() == h:
+                print(True)
+            else:
+                print(False)
+                os.remove(self.file)
