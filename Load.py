@@ -3,7 +3,7 @@ from Decryptage import *
 import os
 
 class Load:
-    def __init__(self, file):
+    def __init__(self, file = "save1.dat"):
         self.file = file
 
     def load(self):

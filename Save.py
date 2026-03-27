@@ -2,7 +2,7 @@ from Hash import *
 from Cryptage import *
 
 class Save:
-    def __init__(self, data , file):
+    def __init__(self, data = None, file = "save1.dat"):
         self.data = data
         self.file = file
 
