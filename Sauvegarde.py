@@ -11,5 +11,4 @@ text = json.dumps(data)
 
 sv = Save(text)
 ld = Load()
-
-sv.save()
+ld.test_if_modified()

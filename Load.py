@@ -17,12 +17,12 @@ class Load:
         print(text)
         full_data = text.split('|')
         if len(full_data) != 2:
-            print(False)
+            print("modified = delete")
             os.remove(self.file)
         else:
             data, h = text.split('|')
             if Hash(data).hashing() == h:
-                print(True)
+                print("non-modified")
             else:
-                print(False)
+                print("modified = delete")
                 os.remove(self.file)
